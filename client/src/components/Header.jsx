@@ -4,9 +4,8 @@ function Header() {
     return (
         <header>
             <div className="nav-bar">
-                <h4 style={{ paddingLeft: '2%' }}>Menu Icon</h4>
-                <h4 style={{ justifySelf: 'end' }}>Log in</h4>
-                <h4 style={{ justifySelf: 'center' }}>Sign In</h4>
+                <h3 style={{ paddingLeft: '2%' }}>Menu Icon</h3>
+                <h3 style={{ justifySelf: 'center' }}>Refresh</h3>
             </div>
         </header>
     );

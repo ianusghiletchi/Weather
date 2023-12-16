@@ -1,12 +1,9 @@
-// server.js (Express server)
-const express = require("express");
-const app = express();
-const port = 3000;
+// client.js (React client)
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import App from './components/App.jsx';
+import './scss/style.scss';
 
-app.get("/", (req, res) => {
-    res.send("Hello, World!");
-});
-
-app.listen(port, () => {
-    console.log("Server running on port 3000.");
-});
+const root = createRoot(document.getElementById('app'));
+root.render(<App />);
