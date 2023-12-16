@@ -1,3 +1,4 @@
+// client.js (React client)
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
@@ -6,4 +7,3 @@ import './scss/style.scss';
 
 const root = createRoot(document.getElementById('app'));
 root.render(<App />);
-

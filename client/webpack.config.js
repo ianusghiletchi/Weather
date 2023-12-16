@@ -4,10 +4,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, "src/index.js"),
+    bundle: path.resolve(__dirname, "client/src/index.js"),  // Updated entry path
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "client/dist"),  // Updated output path
     filename: "[name][contenthash].js",
     clean: true,
     assetModuleFilename: "[name][ext]",
@@ -15,13 +15,16 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"),
+      directory: path.resolve(__dirname, "client/dist"),  // Updated static directory
     },
     port: 3000,
     open: true,
     hot: true,
     compress: true,
     historyApiFallback: true,
+    proxy: {
+      '/api': 'http://localhost:5000',  // Adjust the URL to match your backend server
+    },
   },
   module: {
     rules: [
@@ -49,7 +52,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Weather App",
       filename: "index.html",
-      template: "src/template.html",
+      template: "client/src/template.html",  // Updated template path
     }),
   ],
 };
