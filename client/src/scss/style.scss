@@ -8,12 +8,24 @@ body {
 }
 
 .nav-bar {
-    display: grid;
-    grid-template-columns: 90% 10%;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .icon-and-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-and-title i {
+    margin-right: 10px;
+  }
+  
 
 .cwi-div {
-    margin-top: 5%;
+    margin-top: 2.5%;
     display: flex;
     justify-content: center;
 }
@@ -41,7 +53,17 @@ body {
     color: aliceblue;
 }
 
+@media (max-width: 426px) {
+    .future-wcast {
+      margin-top: 13%;
+    }
+  }
+  
 .fwc-day {
     border-color:aliceblue;
     padding: 3%;
+}
+
+.fwc-day > i {
+    font-size: 3rem;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Body({ temperature, realFeelTemperature }) {
+function Body({ temperature, realFeelTemperature, windSpeed, airQuality, precipitationProbability }) {
   return (
     <div>
       <div className="cwi-div">
@@ -14,16 +14,16 @@ function Body({ temperature, realFeelTemperature }) {
       </div>
       <div className="future-wcast">
         <div className="fwc-day">
-          <i class="bi bi-wind"></i>
-          <h3>-2</h3>
+          <i className="bi bi-wind"></i>
+          <h2>{windSpeed} km/h</h2>
         </div>
         <div className="fwc-day">
-          <i class="bi bi-lungs"></i>
-          <h3>2</h3>
+          <i className="bi bi-lungs"></i>
+          <h2>{airQuality}</h2>
         </div>
         <div className="fwc-day">
-          <i class="bi bi-umbrella"></i>
-          <h3>3</h3>
+          <i className="bi bi-umbrella"></i>
+          <h2>{precipitationProbability}%</h2>
         </div>
       </div>
     </div>

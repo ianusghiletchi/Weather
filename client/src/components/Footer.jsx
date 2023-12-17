@@ -5,7 +5,7 @@ function Footer() {
 
     return (
         <footer style={{ position: 'relative', marginTop: 'auto' }}>
-            <p>&copy; {currentYear} Your Website. All rights reserved.</p>
+            <p>&copy; {currentYear} Ghiletchi. All rights reserved.</p>
         </footer>
     );
 }

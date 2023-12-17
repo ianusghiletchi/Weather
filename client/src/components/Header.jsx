@@ -16,13 +16,16 @@ function Header({ onRefresh }) {
   return (
     <header>
       <div className="nav-bar">
-        <h3 style={{ paddingLeft: '2%' }}>Menu Icon</h3>
-        <h3 style={{ justifySelf: 'center', cursor: 'pointer' }} onClick={handleRefreshClick}>
+        <div className="icon-and-title">
+          <i style={{ paddingLeft: '2%', fontSize: '3rem' }} className="bi bi-brightness-alt-high"></i>
+          <h3>Weather+</h3>
+        </div>
+        <h3 style={{ justifySelf: 'end', cursor: 'pointer' }} onClick={handleRefreshClick}>
           Refresh
         </h3>
       </div>
     </header>
   );
-}
+}  
 
 export default Header;
