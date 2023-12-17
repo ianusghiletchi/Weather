@@ -28,7 +28,7 @@ body {
     display: grid;
     grid-template-rows: auto;
     align-items: baseline;
-    justify-content: center;
+    justify-items: center;
 }
 
 .future-wcast {
@@ -43,8 +43,5 @@ body {
 
 .fwc-day {
     border-color:aliceblue;
-    border-radius: 10px;
-    border-style: solid;
     padding: 3%;
-    min-width: 20%;
 }
