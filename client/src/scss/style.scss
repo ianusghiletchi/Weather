@@ -1,7 +1,7 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 body {
-    background-image: url("/src/imgs/bodybackground.jpeg");
+    background-image: url("/client/src/imgs/bodybackground.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +9,7 @@ body {
 
 .nav-bar {
     display: grid;
-    grid-template-columns: 80% 10% 10%;
+    grid-template-columns: 90% 10%;
 }
 
 .cwi-div {
