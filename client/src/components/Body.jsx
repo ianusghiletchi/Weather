@@ -1,61 +1,60 @@
 import React from "react";
 
 function Body({ temperature, realFeelTemperature, windSpeed, airQuality, precipitationProbability, weatherCode }) {
+  console.log("Rendering Body with weatherCode:", weatherCode);
   // Function to get weather icon based on weather condition code
   function getWeatherIcon(weatherCode) {
-    switch (weatherCode) {
-      case 1: // Sunny
-        return "bi bi-sun";
-      case 2: // Mostly Sunny
-        return "bi bi-cloud-sun";
-      case 3: // Partly Sunny
-        return "bi bi-cloud-sun";
-      case 4: // Intermittent Clouds
-        return "bi bi-cloud";
-      case 5: // Hazy Sunshine
-        return "bi bi-cloud-sun";
-      case 6: // Mostly Cloudy
-        return "bi bi-clouds";
-      case 7: // Cloudy
-        return "bi bi-clouds";
-      case 8: // Dreary (Overcast)
-        return "bi bi-clouds";
-      case 11: // Fog
-        return "bi bi-fog";
-      case 12: // Showers
-        return "bi bi-cloud-rain";
-      case 13: // Mostly Cloudy with Showers
-        return "bi bi-cloud-rain";
-      case 14: // Partly Sunny with Showers
-        return "bi bi-cloud-rain";
-      case 15: // T-Storms
-        return "bi bi-cloud-lightning-rain";
-      case 16: // Mostly Cloudy with T-Storms
-        return "bi bi-cloud-lightning-rain";
-      case 17: // Partly Sunny with T-Storms
-        return "bi bi-cloud-lightning-rain";
-      case 18: // Rain
-        return "bi bi-cloud-rain";
-      case 19: // Flurries
-        return "bi bi-cloud-snow";
-      case 20: // Mostly Cloudy with Flurries
-        return "bi bi-cloud-snow";
-      case 21: // Partly Sunny with Flurries
-        return "bi bi-cloud-snow";
-      case 22: // Snow
-        return "bi bi-snow";
-      case 23: // Mostly Cloudy with Snow
-        return "bi bi-snow";
-      case 24: // Ice
-        return "bi bi-thermometer-half";
-      case 25: // Sleet
-        return "bi bi-cloud-sleet";
-      case 26: // Freezing Rain
-        return "bi bi-cloud-snow";
-      case 29: // Rain and Snow
-        return "bi bi-cloud-rain";
-      default:
-        return "bi bi-broadcast-pin";
+    console.log("Weather Code:", weatherCode);
+  
+    const cleanWeatherCode = weatherCode.toLowerCase().trim();
+  
+    if (cleanWeatherCode === "sunny") {
+      return "bi bi-sun";
+    } else if (
+      cleanWeatherCode === "mostly sunny" ||
+      cleanWeatherCode === "partly sunny" ||
+      cleanWeatherCode === "hazy sunshine"
+    ) {
+      return "bi bi-cloud-sun";
+    } else if (
+      cleanWeatherCode === "intermittent clouds" ||
+      cleanWeatherCode === "cloudy" ||
+      cleanWeatherCode === "dreary (overcast)"
+    ) {
+      return "bi bi-clouds";
+    } else if (cleanWeatherCode === "fog") {
+      return "bi bi-fog";
+    } else if (
+      cleanWeatherCode === "showers" ||
+      cleanWeatherCode === "mostly cloudy with showers" ||
+      cleanWeatherCode === "partly sunny with showers" ||
+      cleanWeatherCode === "rain and snow"
+    ) {
+      return "bi bi-cloud-rain";
+    } else if (
+      cleanWeatherCode === "t-storms" ||
+      cleanWeatherCode === "mostly cloudy with t-storms" ||
+      cleanWeatherCode === "partly sunny with t-storms"
+    ) {
+      return "bi bi-cloud-lightning-rain";
+    } else if (cleanWeatherCode === "rain") {
+      return "bi bi-cloud-rain";
+    } else if (
+      cleanWeatherCode === "flurries" ||
+      cleanWeatherCode === "mostly cloudy with flurries" ||
+      cleanWeatherCode === "partly sunny with flurries"
+    ) {
+      return "bi bi-cloud-snow";
+    } else if (cleanWeatherCode === "snow" || cleanWeatherCode === "mostly cloudy with snow") {
+      return "bi bi-snow";
+    } else if (cleanWeatherCode === "ice") {
+      return "bi bi-thermometer-half";
+    } else if (cleanWeatherCode === "sleet" || cleanWeatherCode === "freezing rain") {
+      return "bi bi-cloud-sleet";
+    } else if (cleanWeatherCode === "rain and snow") {
+      return "bi bi-cloud-rain";
+    } else {
+      return "bi bi-broadcast-pin";
     }
   }
 

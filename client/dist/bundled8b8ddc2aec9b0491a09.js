@@ -14,10 +14,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 /* harmony import */ var _Header_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header.jsx */ "./client/src/components/Header.jsx");
 /* harmony import */ var _Footer_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer.jsx */ "./client/src/components/Footer.jsx");
 /* harmony import */ var _Body_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Body.jsx */ "./client/src/components/Body.jsx");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -34,13 +34,40 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function App() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(-5),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
     _useState2 = _slicedToArray(_useState, 2),
     temperature = _useState2[0],
     setTemperature = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState4 = _slicedToArray(_useState3, 2),
+    realFeelTemperature = _useState4[0],
+    setRealFeelTemperature = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState6 = _slicedToArray(_useState5, 2),
+    windSpeed = _useState6[0],
+    setWindSpeed = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+    _useState8 = _slicedToArray(_useState7, 2),
+    airQuality = _useState8[0],
+    setAirQuality = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState10 = _slicedToArray(_useState9, 2),
+    precipitationProbability = _useState10[0],
+    setPrecipitationProbability = _useState10[1];
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+    _useState12 = _slicedToArray(_useState11, 2),
+    weatherCode = _useState12[0],
+    setWeatherCode = _useState12[1];
+  function convertFahrenheitToCelsius(fahrenheit) {
+    return Math.round((fahrenheit - 32) * 5 / 9);
+  }
+  function convertMilesToKilometers(miles) {
+    var kilometers = miles * 1.60934;
+    return Math.round(kilometers);
+  }
   var handleRefresh = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var response, todayTemperature;
+      var _response$data$DailyF, response, todayTemperature, todayRealFeelTemperature, _windSpeed, _airQuality, _precipitationProbability, _weatherCode;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
@@ -49,33 +76,48 @@ function App() {
             return axios__WEBPACK_IMPORTED_MODULE_4__["default"].get("http://localhost:5000/api/weather");
           case 3:
             response = _context.sent;
-            todayTemperature = response.data.DailyForecasts[0].Temperature.Minimum.Value;
+            console.log("API Response:", response);
+            todayTemperature = convertFahrenheitToCelsius(response.data.DailyForecasts[0].Temperature.Maximum.Value);
+            todayRealFeelTemperature = convertFahrenheitToCelsius(response.data.DailyForecasts[0].RealFeelTemperature.Maximum.Value);
+            _windSpeed = convertMilesToKilometers(((_response$data$DailyF = response.data.DailyForecasts[0].Day) === null || _response$data$DailyF === void 0 || (_response$data$DailyF = _response$data$DailyF.Wind) === null || _response$data$DailyF === void 0 || (_response$data$DailyF = _response$data$DailyF.Speed) === null || _response$data$DailyF === void 0 ? void 0 : _response$data$DailyF.Value) || 0);
+            _airQuality = response.data.DailyForecasts[0].AirAndPollen[0].Category || "Unknown";
+            _precipitationProbability = response.data.DailyForecasts[0].Day.PrecipitationProbability;
+            _weatherCode = response.data.Headline.Category;
+            console.log(_weatherCode);
             setTemperature(todayTemperature);
-            _context.next = 11;
+            setRealFeelTemperature(todayRealFeelTemperature);
+            setWindSpeed(_windSpeed);
+            setAirQuality(_airQuality);
+            setPrecipitationProbability(_precipitationProbability);
+            setWeatherCode(_weatherCode);
+            _context.next = 23;
             break;
-          case 8:
-            _context.prev = 8;
+          case 20:
+            _context.prev = 20;
             _context.t0 = _context["catch"](0);
-            console.error(_context.t0);
-          case 11:
+            console.error("Error fetching weather data:", _context.t0);
+          case 23:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[0, 8]]);
+      }, _callee, null, [[0, 20]]);
     }));
     return function handleRefresh() {
       return _ref.apply(this, arguments);
     };
   }();
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    // Fetch initial temperature when the component mounts
     handleRefresh();
-  }, []); // The empty dependency array ensures this effect runs once when the component mounts
-
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
     onRefresh: handleRefresh
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Body_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    temperature: temperature
+    temperature: temperature,
+    realFeelTemperature: realFeelTemperature,
+    windSpeed: windSpeed,
+    airQuality: airQuality,
+    precipitationProbability: precipitationProbability,
+    weatherCode: weatherCode
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Footer_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -96,11 +138,77 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function Body(_ref) {
-  var temperature = _ref.temperature;
+  var temperature = _ref.temperature,
+    realFeelTemperature = _ref.realFeelTemperature,
+    windSpeed = _ref.windSpeed,
+    airQuality = _ref.airQuality,
+    precipitationProbability = _ref.precipitationProbability,
+    weatherCode = _ref.weatherCode;
+  console.log("Rendering Body with weatherCode:", weatherCode);
+  // Function to get weather icon based on weather condition code
+  function getWeatherIcon(weatherCode) {
+    console.log("Weather Code:", weatherCode);
+    switch (weatherCode) {
+      case "Sunny":
+        return "bi bi-sun";
+      case "Mostly Sunny":
+        return "bi bi-cloud-sun";
+      case "Partly Sunny":
+        return "bi bi-cloud-sun";
+      case "Intermittent Clouds":
+        return "bi bi-cloud";
+      case "Hazy Sunshine":
+        return "bi bi-cloud-sun";
+      case "Mostly Cloudy":
+        return "bi bi-clouds";
+      case "Cloudy":
+        return "bi bi-clouds";
+      case "Dreary (Overcast)":
+        return "bi bi-clouds";
+      case "Fog":
+        return "bi bi-fog";
+      case "Showers":
+      case "Mostly Cloudy with Showers":
+      case "Partly Sunny with Showers":
+      case "Rain and Snow":
+        return "bi bi-cloud-rain";
+      case "T-Storms":
+        return "bi bi-cloud-lightning-rain";
+      case "Mostly Cloudy with T-Storms":
+        return "bi bi-cloud-lightning-rain";
+      case "Partly Sunny with T-Storms":
+        return "bi bi-cloud-lightning-rain";
+      case "Rain":
+        return "bi bi-cloud-rain";
+      case "Flurries":
+        return "bi bi-cloud-snow";
+      case "Mostly Cloudy with Flurries":
+        return "bi bi-cloud-snow";
+      case "Partly Sunny with Flurries":
+        return "bi bi-cloud-snow";
+      case "Snow":
+        return "bi bi-snow";
+      case "Mostly Cloudy with Snow":
+        return "bi bi-snow";
+      case "Ice":
+        return "bi bi-thermometer-half";
+      case "Sleet":
+        return "bi bi-cloud-sleet";
+      case "Freezing Rain":
+        return "bi bi-cloud-snow";
+      case "Rain and Snow":
+        return "bi bi-cloud-rain";
+      default:
+        return "bi bi-broadcast-pin";
+    }
+  }
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "cwi-div"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-    className: "bi bi-cloud-snow cwi"
+    style: {
+      fontSize: '10rem'
+    },
+    className: getWeatherIcon(weatherCode)
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "temp-div"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
@@ -117,15 +225,21 @@ function Body(_ref) {
       color: 'aliceblue',
       margin: '0%'
     }
-  }, "Moldova")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "RealFeel ", realFeelTemperature, "\xB0")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "future-wcast"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "fwc-day"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Tuesday"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "-2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
+    className: "bi bi-wind"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, windSpeed, " km/h")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "fwc-day"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Wednesday"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
+    className: "bi bi-lungs"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, airQuality)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "fwc-day"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Thursday"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "3"))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
+    className: "bi bi-umbrella"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, precipitationProbability, "%"))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Body);
 
@@ -151,7 +265,7 @@ function Footer() {
       position: 'relative',
       marginTop: 'auto'
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", currentYear, " Your Website. All rights reserved."));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", currentYear, " Ghiletchi. All rights reserved."));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
 
@@ -180,7 +294,7 @@ function Header(_ref) {
   var onRefresh = _ref.onRefresh;
   var handleRefreshClick = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var response, todayTemperatureFahrenheit, todayTemperatureCelsius;
+      var response, todayTemperatureCelsius;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
@@ -189,20 +303,19 @@ function Header(_ref) {
             return axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("http://localhost:5000/api/weather");
           case 3:
             response = _context.sent;
-            todayTemperatureFahrenheit = response.data.DailyForecasts[0].Temperature.Minimum.Value; // Convert Fahrenheit to Celsius
-            todayTemperatureCelsius = (todayTemperatureFahrenheit - 32) * (5 / 9);
+            todayTemperatureCelsius = response.data.DailyForecasts[0].Temperature.Minimum.Value;
             onRefresh(todayTemperatureCelsius);
-            _context.next = 12;
+            _context.next = 11;
             break;
-          case 9:
-            _context.prev = 9;
+          case 8:
+            _context.prev = 8;
             _context.t0 = _context["catch"](0);
             console.error(_context.t0);
-          case 12:
+          case 11:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[0, 9]]);
+      }, _callee, null, [[0, 8]]);
     }));
     return function handleRefreshClick() {
       return _ref2.apply(this, arguments);
@@ -210,13 +323,17 @@ function Header(_ref) {
   }();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "nav-bar"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "icon-and-title"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
     style: {
-      paddingLeft: '2%'
-    }
-  }, "Menu Icon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+      paddingLeft: '2%',
+      fontSize: '3rem'
+    },
+    className: "bi bi-brightness-alt-high"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Weather+")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     style: {
-      justifySelf: 'center',
+      justifySelf: 'end',
       cursor: 'pointer'
     },
     onClick: handleRefreshClick
@@ -2372,12 +2489,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 }
 
 .nav-bar {
-  display: grid;
-  grid-template-columns: 90% 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.icon-and-title {
+  display: flex;
+  align-items: center;
+}
+
+.icon-and-title i {
+  margin-right: 10px;
 }
 
 .cwi-div {
-  margin-top: 5%;
+  margin-top: 2.5%;
   display: flex;
   justify-content: center;
 }
@@ -2391,7 +2519,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
   display: grid;
   grid-template-rows: auto;
   align-items: baseline;
-  justify-content: center;
+  justify-items: center;
 }
 
 .future-wcast {
@@ -2404,13 +2532,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
   color: aliceblue;
 }
 
+@media (max-width: 426px) {
+  .future-wcast {
+    margin-top: 13%;
+  }
+}
 .fwc-day {
   border-color: aliceblue;
-  border-radius: 10px;
-  border-style: solid;
   padding: 3%;
-  min-width: 20%;
-}`, "",{"version":3,"sources":["webpack://./client/src/scss/style.scss"],"names":[],"mappings":"AAEA;EACI,yDAAA;EACA,4BAAA;EACA,4BAAA;EACA,sBAAA;AAAJ;;AAGA;EACI,aAAA;EACA,8BAAA;AAAJ;;AAGA;EACI,cAAA;EACA,aAAA;EACA,uBAAA;AAAJ;;AAGA;EACI,oBAAA;EACA,gBAAA;AAAJ;;AAIA;EACI,aAAA;EACA,wBAAA;EACA,qBAAA;EACA,uBAAA;AADJ;;AAIA;EACI,cAAA;EACA,iBAAA;EACA,aAAA;EACA,kCAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;AADJ;;AAIA;EACI,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,WAAA;EACA,cAAA;AADJ","sourcesContent":["@import \"~bootstrap-icons/font/bootstrap-icons.css\";\r\n\r\nbody {\r\n    background-image: url(\"/client/src/imgs/bodybackground.jpeg\");\r\n    background-attachment: fixed;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n}\r\n\r\n.nav-bar {\r\n    display: grid;\r\n    grid-template-columns: 90% 10%;\r\n}\r\n\r\n.cwi-div {\r\n    margin-top: 5%;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n\r\n.cwi {\r\n    justify-self: center;\r\n    font-size: 10rem;\r\n    \r\n}\r\n\r\n.temp-div {\r\n    display: grid;\r\n    grid-template-rows: auto;\r\n    align-items: baseline;\r\n    justify-content: center;\r\n}\r\n\r\n.future-wcast {\r\n    margin-top: 5%;\r\n    margin-bottom: 5%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    text-align: center;\r\n    color: aliceblue;\r\n}\r\n\r\n.fwc-day {\r\n    border-color:aliceblue;\r\n    border-radius: 10px;\r\n    border-style: solid;\r\n    padding: 3%;\r\n    min-width: 20%;\r\n}"],"sourceRoot":""}]);
+}
+
+.fwc-day > i {
+  font-size: 3rem;
+}`, "",{"version":3,"sources":["webpack://./client/src/scss/style.scss"],"names":[],"mappings":"AAEA;EACI,yDAAA;EACA,4BAAA;EACA,4BAAA;EACA,sBAAA;AAAJ;;AAGA;EACI,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,aAAA;AAAJ;;AAGE;EACE,aAAA;EACA,mBAAA;AAAJ;;AAGE;EACE,kBAAA;AAAJ;;AAIA;EACI,gBAAA;EACA,aAAA;EACA,uBAAA;AADJ;;AAIA;EACI,oBAAA;EACA,gBAAA;AADJ;;AAKA;EACI,aAAA;EACA,wBAAA;EACA,qBAAA;EACA,qBAAA;AAFJ;;AAKA;EACI,cAAA;EACA,iBAAA;EACA,aAAA;EACA,kCAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;AAFJ;;AAKA;EACI;IACE,eAAA;EAFJ;AACF;AAKA;EACI,uBAAA;EACA,WAAA;AAHJ;;AAMA;EACI,eAAA;AAHJ","sourcesContent":["@import \"~bootstrap-icons/font/bootstrap-icons.css\";\r\n\r\nbody {\r\n    background-image: url(\"/client/src/imgs/bodybackground.jpeg\");\r\n    background-attachment: fixed;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n}\r\n\r\n.nav-bar {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 10px;\r\n  }\r\n  \r\n  .icon-and-title {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  \r\n  .icon-and-title i {\r\n    margin-right: 10px;\r\n  }\r\n  \r\n\r\n.cwi-div {\r\n    margin-top: 2.5%;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n\r\n.cwi {\r\n    justify-self: center;\r\n    font-size: 10rem;\r\n    \r\n}\r\n\r\n.temp-div {\r\n    display: grid;\r\n    grid-template-rows: auto;\r\n    align-items: baseline;\r\n    justify-items: center;\r\n}\r\n\r\n.future-wcast {\r\n    margin-top: 5%;\r\n    margin-bottom: 5%;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    text-align: center;\r\n    color: aliceblue;\r\n}\r\n\r\n@media (max-width: 426px) {\r\n    .future-wcast {\r\n      margin-top: 13%;\r\n    }\r\n  }\r\n  \r\n.fwc-day {\r\n    border-color:aliceblue;\r\n    padding: 3%;\r\n}\r\n\r\n.fwc-day > i {\r\n    font-size: 3rem;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40557,4 +40691,4 @@ root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createEle
 
 /******/ })()
 ;
-//# sourceMappingURL=bundledd20b9fbb31668d88c88.js.map
+//# sourceMappingURL=bundled8b8ddc2aec9b0491a09.js.map
