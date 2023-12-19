@@ -1,19 +1,31 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 body {
-    background-image: url("/src/imgs/bodybackground.jpeg");
+    background-image: url("/client/src/imgs/bodybackground.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .nav-bar {
-    display: grid;
-    grid-template-columns: 80% 10% 10%;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .icon-and-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-and-title i {
+    margin-right: 10px;
+  }
+  
 
 .cwi-div {
-    margin-top: 5%;
+    margin-top: 2.5%;
     display: flex;
     justify-content: center;
 }
@@ -28,7 +40,7 @@ body {
     display: grid;
     grid-template-rows: auto;
     align-items: baseline;
-    justify-content: center;
+    justify-items: center;
 }
 
 .future-wcast {
@@ -41,10 +53,17 @@ body {
     color: aliceblue;
 }
 
+@media (max-width: 426px) {
+    .future-wcast {
+      margin-top: 13%;
+    }
+  }
+  
 .fwc-day {
     border-color:aliceblue;
-    border-radius: 10px;
-    border-style: solid;
     padding: 3%;
-    min-width: 20%;
+}
+
+.fwc-day > i {
+    font-size: 3rem;
 }
